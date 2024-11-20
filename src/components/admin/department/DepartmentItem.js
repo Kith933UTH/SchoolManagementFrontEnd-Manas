@@ -158,7 +158,7 @@ const DepartmentItem = (props) => {
 							&nbsp;
 						</Typography>
 					</Link>
-					<Typography className="text-sm text-center">
+					<Typography className="text-sm text-center col-span-2">
 						{data?.description}&nbsp;
 					</Typography>
 					<Typography className="whitespace-nowrap text-sm text-center flex justify-center items-center gap-4">
@@ -206,7 +206,7 @@ const DepartmentItem = (props) => {
 				<input
 					value={data?.name}
 					onChange={(e) => setData({ ...data, name: e.target.value })}
-					className={`w-full text-center text-sm font-semibold border-solid border-gray-400 border-[1px] rounded-sm outline-none focus:shadow-around`}
+					className={`w-full py-1 text-center text-sm font-semibold border-solid border-gray-400 border-[1px] rounded-sm outline-none focus:shadow-around`}
 					spellCheck="false"
 				/>
 				{/* chọn tổ trưởng  */}
@@ -215,7 +215,7 @@ const DepartmentItem = (props) => {
 						<MenuHandler>
 							<Button
 								variant="text"
-								className="flex items-center justify-center gap-2 text-sm font-medium capitalize tracking-normal outline-none bg-upperBg py-1 px-3 border-solid border-[1px] border-gray-400 rounded-sm"
+								className="flex w-full items-center justify-center gap-2 text-sm font-medium capitalize tracking-normal outline-none bg-upperBg py-1 px-3 border-solid border-[1px] border-gray-400 rounded-sm"
 							>
 								{chosenTeacher?.firstName +
 									' ' +
@@ -255,7 +255,7 @@ const DepartmentItem = (props) => {
 					onChange={(e) =>
 						setData({ ...data, description: e.target.value })
 					}
-					className={`w-full text-center text-sm border-solid border-gray-400 border-[1px] rounded-sm outline-none focus:shadow-around`}
+					className={`w-full py-1 text-center col-span-2 text-sm border-solid border-gray-400 border-[1px] rounded-sm outline-none focus:shadow-around`}
 					spellCheck="false"
 				/>
 

@@ -86,7 +86,7 @@ const ManageDepartmentsPage = () => {
 				</div>
 				<div className="w-full h-min bg-white rounded-md border-[1px] border-solid border-gray-300 shadow-sm shadow-gray-400 flex flex-col items-center">
 					{/* đề mục  */}
-					<div className="w-full grid grid-cols-[80px_repeat(4,1fr)] gap-4 p-4 py-3 border-b-[1px] border-solid border-gray-400 bg-main/30 rounded-t-md">
+					<div className="w-full grid grid-cols-[80px_repeat(4,1fr)_180px] gap-4 p-4 py-3 border-b-[1px] border-solid border-gray-400 bg-main/30 rounded-t-md">
 						<Typography className="whitespace-nowrap font-bold text-sm text-center">
 							STT
 						</Typography>
@@ -118,7 +118,7 @@ const ManageDepartmentsPage = () => {
 								}
 							></input>
 						</Typography>
-						<Typography className="whitespace-nowrap font-bold text-sm text-center">
+						<Typography className="whitespace-nowrap font-bold text-sm text-center col-span-2">
 							Mô tả
 						</Typography>
 						<Typography className="whitespace-nowrap font-bold text-sm text-center">
@@ -140,7 +140,7 @@ const ManageDepartmentsPage = () => {
 					{/* danh sách phòng ban  */}
 					{departmentListData?.map((departmentItem, index, arr) => (
 						<DepartmentItem
-							className={`w-full grid grid-cols-[80px_repeat(4,1fr)] gap-4 p-3 border-b-[1px] border-solid border-gray-300 hover:bg-main/20 place-items-center ${
+							className={`w-full grid grid-cols-[80px_repeat(4,1fr)_180px] gap-4 p-3 border-b-[1px] border-solid border-gray-300 hover:bg-main/20 place-items-center ${
 								index === arr.length - 1 && 'border-none'
 							} ${index % 2 === 0 && 'bg-main/5'}`}
 							key={departmentItem?.id}

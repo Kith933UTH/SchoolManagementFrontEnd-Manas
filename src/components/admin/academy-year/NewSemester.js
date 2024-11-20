@@ -146,6 +146,7 @@ const NewSemester = ({ academyYearId }) => {
 						>
 							Ngày bắt đầu:
 						</label>
+
 						<input
 							id="semesterStartDate"
 							type="date"
