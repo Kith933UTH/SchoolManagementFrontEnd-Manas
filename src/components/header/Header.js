@@ -32,8 +32,9 @@ const Header = () => {
 
 	//focus
 	const handleSearchInputFocus = (value) => {
+		let isOpen = openSearch;
 		setIsSearchInputFocus(value);
-		if (value) setOpenSearch(true);
+		if (value) setOpenSearch(!isOpen);
 		// else setOpenSearch(false);
 	};
 

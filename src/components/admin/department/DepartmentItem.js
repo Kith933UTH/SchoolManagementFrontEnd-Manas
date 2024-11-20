@@ -158,7 +158,7 @@ const DepartmentItem = (props) => {
 							&nbsp;
 						</Typography>
 					</Link>
-					<Typography className="text-sm text-center col-span-2">
+					<Typography className="text-sm text-center py-1 px-2 col-span-2">
 						{data?.description}&nbsp;
 					</Typography>
 					<Typography className="whitespace-nowrap text-sm text-center flex justify-center items-center gap-4">
@@ -255,7 +255,7 @@ const DepartmentItem = (props) => {
 					onChange={(e) =>
 						setData({ ...data, description: e.target.value })
 					}
-					className={`w-full py-1 text-center col-span-2 text-sm border-solid border-gray-400 border-[1px] rounded-sm outline-none focus:shadow-around`}
+					className={`w-full p-1 px-2 text-center col-span-2 text-sm border-solid border-gray-400 border-[1px] rounded-sm outline-none focus:shadow-around`}
 					spellCheck="false"
 				/>
 
