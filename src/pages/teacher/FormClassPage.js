@@ -553,8 +553,8 @@ const FormClassPage = () => {
 											content={'Đã có lỗi xảy ra'}
 										/>
 									)}
-									{gradeData && (
-										<div className="w-fit">
+									{gradeData &&  gradeData.length > 0 && (
+										<div className="w-full">
 											{gradeData?.map((grade, index) => (
 												<div
 													key={grade?.studentId}
