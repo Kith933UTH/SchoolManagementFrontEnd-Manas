@@ -26,6 +26,7 @@ const ManageStudentsPage = () => {
 		page: active - 1,
 		quantity: NUMBER_ITEM_PER_PAGE,
 	});
+
 	const [studentListData, setStudentListData] = useState(null);
 	useEffect(() => {
 		if (studentListDataApi) setStudentListData(studentListDataApi.items);

@@ -87,9 +87,11 @@ const NewStudent = ({ isActive, toggleActive }) => {
 			toggleActive();
 		} catch (err) {
 			let mess = '';
-			if (!err?.originalStatus) {
+			if (!err?.status) {
 				// isLoading: true until timeout occurs
 				mess = 'No Server Response';
+			} else if (err.status === 409) {
+				mess = 'Mã định danh hoặc số điện thoại đã tồn tại!';
 			} else if (err.status === 400) {
 				mess = 'Vui lòng nhập đúng định dạnh';
 			} else if (err.status === 401) {
