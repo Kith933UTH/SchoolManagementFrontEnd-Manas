@@ -68,7 +68,7 @@ const EditGradeEachTypeItem = ({ gradeData, setGradeData }) => {
 			{gradeData.map((item, index) => (
 				<input
 					key={'edit_item_' + index}
-					value={item ? item : ''}
+					value={item !== null ? item : ''}
 					onChange={(e) => handleChangeInput(index, e.target.value)}
 					ref={(el) => (inputRefs.current[index] = el)}
 					onKeyDown={(e) => handleKeyDown(e, index)}
