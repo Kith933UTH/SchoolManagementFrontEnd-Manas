@@ -471,7 +471,7 @@ const FormClassPage = () => {
 							</div>
 							<div className="w-full h-min bg-white rounded-md border-[1px] border-solid border-gray-300 shadow-sm shadow-gray-400 flex flex-col items-center">
 								{/* đề mục  */}
-								<div className="w-full grid grid-cols-[80px_280px_repeat(6,120px)] border-b-[1px] border-solid border-gray-500 bg-main/30 rounded-t-md">
+								<div className="w-full grid grid-cols-[80px_280px_repeat(6,1fr)] border-b-[1px] border-solid border-gray-500 bg-main/30 rounded-t-md">
 									<Typography className="whitespace-nowrap font-bold text-sm text-center py-3 px-3">
 										STT
 									</Typography>
@@ -558,7 +558,7 @@ const FormClassPage = () => {
 											{gradeData?.map((grade, index) => (
 												<div
 													key={grade?.studentId}
-													className={`w-full h-11 grid grid-cols-[80px_280px_repeat(6,120px)] border-b-[1px] border-solid border-gray-300 hover:bg-main/10  ${
+													className={`w-full h-11 grid grid-cols-[80px_280px_repeat(6,1fr)] border-b-[1px] border-solid border-gray-300 hover:bg-main/10  ${
 														index % 2 === 0 &&
 														'bg-main/5'
 													} `}
@@ -589,7 +589,7 @@ const FormClassPage = () => {
 															'text-error'
 														}`}
 													>
-														{grade?.oralTest ? (
+														{grade?.oralTest !== null ? (
 															grade.oralTest
 														) : (
 															<span className="w-full flex justify-center items-center">
@@ -605,7 +605,7 @@ const FormClassPage = () => {
 															'text-error'
 														}`}
 													>
-														{grade?.smallTest ? (
+														{grade?.smallTest !== null ? (
 															grade.smallTest
 														) : (
 															<span className="w-full flex justify-center items-center select-none">
@@ -621,7 +621,7 @@ const FormClassPage = () => {
 															'text-error'
 														}`}
 													>
-														{grade?.bigTest ? (
+														{grade?.bigTest !== null ? (
 															grade.bigTest
 														) : (
 															<span className="w-full flex justify-center items-center select-none">
@@ -637,7 +637,7 @@ const FormClassPage = () => {
 															'text-error'
 														}`}
 													>
-														{grade?.midtermExam ? (
+														{grade?.midtermExam !== null ? (
 															grade.midtermExam
 														) : (
 															<span className="w-full flex justify-center items-center select-none">
@@ -653,7 +653,7 @@ const FormClassPage = () => {
 															'text-error'
 														}`}
 													>
-														{grade?.finalExam ? (
+														{grade?.finalExam !== null ? (
 															grade.finalExam
 														) : (
 															<span className="w-full flex justify-center items-center select-none">
@@ -669,7 +669,7 @@ const FormClassPage = () => {
 															'text-error'
 														}`}
 													>
-														{grade?.subjectAverage ? (
+														{grade?.subjectAverage !== null ? (
 															grade.subjectAverage
 														) : (
 															<span className="w-full flex justify-center items-center select-none">
